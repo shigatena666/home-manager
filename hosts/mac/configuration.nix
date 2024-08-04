@@ -1,6 +1,6 @@
 { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
-    gaming.enable = true;
+    gaming.enable = false;
     generic-mac.enable = true;
     generic-windows.enable = false;
     networking.enable = true;

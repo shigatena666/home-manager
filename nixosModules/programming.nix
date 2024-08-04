@@ -7,9 +7,9 @@
 
   config = lib.mkIf config.programming.enable {
     home.packages = with pkgs; [
-      # vscode
-      # git
-      # docker
+      vscode
+      git
+      docker
     ];
   };
 }
