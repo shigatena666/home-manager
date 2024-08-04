@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
     security.pam.enableSudoTouchIdAuth = true;
     nixpkgs.config.allowUnfree = true;
     gaming.enable = false;
