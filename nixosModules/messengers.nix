@@ -9,7 +9,6 @@
     home.packages = with pkgs; [
       vesktop
       slack
-      ferdium
       # beeper
     ];
   };
