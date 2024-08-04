@@ -7,8 +7,6 @@
 
   config = lib.mkIf config.generic-mac.enable {
     home.packages = with pkgs; [
-      vesktop
-      slack
       arc-browser
       warp-terminal
       protonmail-desktop
