@@ -9,7 +9,7 @@
     home.packages = with pkgs; [
       vesktop
       slack
-      gurk-rs
+      flare-signal
     ];
   };
 }
