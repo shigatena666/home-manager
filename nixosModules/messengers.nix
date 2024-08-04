@@ -10,7 +10,6 @@
       vesktop
       slack
       gurk-rs
-      scli
     ];
   };
 }
