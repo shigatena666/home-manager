@@ -9,7 +9,8 @@
     home.packages = with pkgs; [
       vesktop
       slack
-      beeper
+      zapzap
+      # beeper
     ];
   };
 }
