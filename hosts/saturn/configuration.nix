@@ -2,7 +2,6 @@
 
     # activating modules.
     nixpkgs.config.allowUnfree = true;
-    brew.enable = true;
     gaming.enable = false;
     generic-mac.enable = true;
     generic-windows.enable = false;
