@@ -12,13 +12,13 @@
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       systems = {
-        mac = "aarch64-darwin"; # For M1 Macs
-        windows = "x86_64-windows"; # For Windows x86
+        mac = "aarch64-darwin"; # for M1 mac
+        windows = "x86_64-windows"; # for windows x86
       };
     in
     {
       homeConfigurations = {
-        "mac" = home-manager.lib.homeManagerConfiguration {
+        "saturn" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.mac; };
           modules = [
             ./hosts/saturn/home.nix
@@ -26,7 +26,7 @@
             ./nixosModules
           ];
         };
-        "windows" = home-manager.lib.homeManagerConfiguration {
+        "sun" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.windows; };
           modules = [
             ./hosts/sun/home.nix

@@ -4,6 +4,4 @@
   home.stateVersion = "23.11";
 
   programs.home-manager.enable = true;
-
-  # Add your configurations here
 }
