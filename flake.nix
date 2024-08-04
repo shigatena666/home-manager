@@ -25,7 +25,7 @@
               ./darwin-configuration.nix
             ];
         };
-      }
+      };
 
       homeConfigurations = {
         "saturn" = home-manager.lib.homeManagerConfiguration {
