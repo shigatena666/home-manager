@@ -1,5 +1,6 @@
 { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
+    brew.enable = false;
     gaming.enable = true;
     generic-mac.enable = false;
     generic-windows.enable = true;

@@ -1,5 +1,6 @@
 {
   imports = [
+    ./brew.nix
     ./gaming.nix
     ./generic-mac.nix
     ./generic-windows.nix

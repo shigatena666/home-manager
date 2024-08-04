@@ -23,7 +23,7 @@
           machineName = nix-darwin.lib.darwinSystem {
             pkgs = import nixpkgs { system = systems.mac; };
             modules = [
-              ./darwin-configuration.nix
+            ./hosts/saturn/configuration.nix
             ];
         };
       };
