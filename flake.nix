@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-darwin.url = "github:LnL7/nix-darwin";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,6 +18,14 @@
       };
     in
     {
+      darwinConfigurations = {
+        machineName = nix-darwin.lib.darwinSystem {
+          pkgs = import nixpkgs { system = systems.mac; };
+          modules = [
+            ./darwin-configuration.nix
+          ];
+      };
+
       homeConfigurations = {
         "saturn" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.mac; };

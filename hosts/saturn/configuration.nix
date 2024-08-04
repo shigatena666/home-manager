@@ -1,5 +1,4 @@
-{ pkgs, config, ... }: {
-    security.pam.enableSudoTouchIdAuth = true;
+{ pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
     gaming.enable = false;
     generic-mac.enable = true;
