@@ -1,6 +1,6 @@
 # Home Manager Configuration
 
-This repository contains the Home Manager configuration files and related NixOS modules.
+This repository contains my own Home Manager configuration files and related NixOS modules.
 
 # Compiling Nix flakes
 
