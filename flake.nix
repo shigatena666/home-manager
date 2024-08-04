@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, ... } @ inputs:
     let
       systems = {
         mac = "aarch64-darwin"; # for M1 mac
