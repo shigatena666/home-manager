@@ -18,6 +18,7 @@
       hidden-bar
       alt-tab-macos
       unar
+      neofetch
     ];
   };
 }
