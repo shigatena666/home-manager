@@ -19,12 +19,13 @@
     in
     {
       darwinConfigurations = {
-        machineName = nix-darwin.lib.darwinSystem {
-          pkgs = import nixpkgs { system = systems.mac; };
-          modules = [
-            ./darwin-configuration.nix
-          ];
-      };
+          machineName = nix-darwin.lib.darwinSystem {
+            pkgs = import nixpkgs { system = systems.mac; };
+            modules = [
+              ./darwin-configuration.nix
+            ];
+        };
+      }
 
       homeConfigurations = {
         "saturn" = home-manager.lib.homeManagerConfiguration {
@@ -45,4 +46,4 @@
         };
       };
     };
-};
+}
