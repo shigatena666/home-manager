@@ -10,6 +10,7 @@
       vesktop
       slack
       gurk-rs
+      nchat
     ];
   };
 }
