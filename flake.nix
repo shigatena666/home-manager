@@ -21,16 +21,16 @@
         "mac" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.mac; };
           modules = [
-            ./hosts/mac/home.nix
-            ./hosts/mac/configuration.nix
+            ./hosts/saturn/home.nix
+            ./hosts/saturn/configuration.nix
             ./nixosModules
           ];
         };
         "windows" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.windows; };
           modules = [
-            ./hosts/windows/home.nix
-            ./hosts/windows/configuration.nix
+            ./hosts/sun/home.nix
+            ./hosts/sun/configuration.nix
             ./nixosModules
           ];
         };
