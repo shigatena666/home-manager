@@ -12,7 +12,7 @@
       ];
 
       brews = [
-
+        "cowsay"
       ];
 
       casks = [
