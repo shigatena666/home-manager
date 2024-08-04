@@ -24,6 +24,7 @@
             pkgs = import nixpkgs { system = systems.mac; };
             modules = [
               ./hosts/saturn/darwin-configuration.nix
+              ./nixosModules/brew.nix
             ];
         };
       };
