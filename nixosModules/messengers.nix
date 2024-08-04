@@ -1,5 +1,8 @@
 { pkgs, lib, config, ... }:
 
+let
+  gurk-rs = pkgs.callPackage ./gurk-rs.nix {};
+in
 {
   options.messengers = {
     enable = lib.mkEnableOption "enables messengers module";
@@ -10,7 +13,6 @@
       vesktop
       slack
       gurk-rs
-      nchat
     ];
   };
 }
