@@ -10,15 +10,5 @@
     networking.enable = true;
     pentesting.enable = true;
     programming.enable = true;
-    
-    # activating touchid for privesc
-    security.pam.enableSudoTouchIdAuth = true;
 
-    # importing homebrew
-    homebrew = {
-        enable = true;
-        onActivation.autoUpdate = true;
-        onActivation.cleanup = "uninstall";
-        brewPrefix = "/opt/homebrew/bin/";
-    };
 }
