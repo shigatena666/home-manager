@@ -2,7 +2,7 @@
   imports = [
     ./gaming.nix
     ./generic-mac.nix
-    ./generic-windows.nix
+    ./generic-linux.nix
     ./messengers.nix
     ./networking.nix
     ./pentesting.nix

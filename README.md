@@ -28,7 +28,7 @@ It is heavily inspired by the advices of Vimjoyer on this video : https://github
     ├── default.nix
     ├── gaming.nix
     ├── generic-mac.nix
-    ├── generic-windows.nix
+    ├── generic-linux.nix
     ├── messengers.nix
     ├── networking.nix
     ├── pentesting.nix
@@ -52,7 +52,7 @@ It is heavily inspired by the advices of Vimjoyer on this video : https://github
     - **default.nix**: Default NixOS module.
     - **gaming.nix**: NixOS module for gaming.
     - **generic-mac.nix**: Generic NixOS module for Mac.
-    - **generic-windows.nix**: Generic NixOS module for Windows.
+    - **generic-linux.nix**: Generic NixOS module for linux.
     - **messengers.nix**: NixOS module for messenger applications.
     - **networking.nix**: NixOS module for networking.
     - **pentesting.nix**: NixOS module for pentesting.

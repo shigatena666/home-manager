@@ -17,7 +17,7 @@
     let
       systems = {
         mac = "aarch64-darwin"; # for M1 mac
-        windows = "x86_64-windows"; # for windows x86
+        linux = "x86_64-linux"; # for linux x86
       };
     in
     {
@@ -47,7 +47,7 @@
           ];
         };
         "sun" = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs { system = systems.windows; };
+          pkgs = import nixpkgs { system = systems.linux; };
           modules = [
             ./hosts/sun/home.nix
             ./hosts/sun/configuration.nix
