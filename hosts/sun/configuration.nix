@@ -1,8 +1,8 @@
 { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
     gaming.enable = true;
-    generic-mac.enable = false;
-    generic-linux.enable = true;
+    generic.enable = true;
+    generic.system.linux = true;
     messengers.enable = true;
     networking.enable = true;
     pentesting.enable = false;

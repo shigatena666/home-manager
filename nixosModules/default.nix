@@ -1,8 +1,7 @@
 {
   imports = [
     ./gaming.nix
-    ./generic-mac.nix
-    ./generic-linux.nix
+    ./generic.nix
     ./messengers.nix
     ./networking.nix
     ./pentesting.nix

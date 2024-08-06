@@ -3,8 +3,8 @@
     # activating modules.
     nixpkgs.config.allowUnfree = true;
     gaming.enable = false;
-    generic-mac.enable = true;
-    generic-linux.enable = false;
+    generic.enable = true;
+    generic.system.mac = true;
     messengers.enable = true;
     networking.enable = true;
     pentesting.enable = true;
