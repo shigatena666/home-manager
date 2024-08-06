@@ -11,6 +11,8 @@
       whatsapp-for-linux
       vesktop
       xdg-desktop-portal
+      git
+      vscode
     ];
   };
 }

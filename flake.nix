@@ -72,7 +72,6 @@
             ./hosts/sun/configuration.nix
             ./nixosModules
           ];
-          nixosConfigurations = import ./hosts { inherit self; };
         };
       };
     };
