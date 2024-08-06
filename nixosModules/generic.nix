@@ -11,30 +11,23 @@
   };
 
   config = lib.mkIf config.generic.enable {
-    home.packages = with pkgs; let
-      isLinux = config.generic.system.linux;
-      isMac = config.generic.system.mac;
-      isWindows = config.generic.system.mac;
-    in
-    lib.concatLists [
-      lib.optionals isLinux [
+    home.packages = with pkgs;
+      [
+        warp-terminal
+        protonmail-desktop
+        ani-cli
+        neofetch
+      ]
+      ++ lib.optionals config.generic.system.linux [
         signal-desktop
         whatsapp-for-linux
         vesktop
         xdg-desktop-portal
         git
-        vscode-with-extensions
-        warp-terminal
-        protonmail-desktop
-        ani-cli
-        neofetch
-        openrgb-with-all-plugins
+        vscode
       ]
-      lib.optionals isMac [
+      ++ lib.optionals config.generic.system.mac [
         arc-browser
-        warp-terminal
-        protonmail-desktop
-        ani-cli
         iina
         raycast
         rectangle
@@ -42,11 +35,6 @@
         hidden-bar
         alt-tab-macos
         unar
-        neofetch
-      ]
-      lib.optionals isWindows [
-
-      ]
-    ];
+      ];
   };
 }
