@@ -11,9 +11,44 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    impurity.url = "github:outfoxxed/impurity.nix";
+    thorium.url = "github:end-4/nix-thorium";
+
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      # inputs.nixpkgs.follows = "hyprland";
+    };
+
+    ags.url = "github:Aylur/ags";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+    gross = {
+      url = "github:fufexan/gross";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
+    matugen = {
+      url = "github:/InioX/Matugen";
+      # ref = "refs/tags/matugen-v0.10.0"
+    };
+    more-waita = {
+      url = "github:somepaulo/MoreWaita";
+      flake = false;
+    };
+    firefox-gnome-theme = {
+      url = "github:rafaelmardojai/firefox-gnome-theme";
+      flake = false;
+    };
+    anyrun = {
+      url = "github:Kirottu/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       systems = {
         mac = "aarch64-darwin"; # for M1 mac
@@ -21,22 +56,6 @@
       };
     in
     {
-      darwinConfigurations = {
-          "saturn" = nix-darwin.lib.darwinSystem {
-            pkgs = import nixpkgs { system = systems.mac; };
-            modules = [
-              ./hosts/saturn/darwin-configuration.nix
-              ./nixosModules/brew.nix
-              home-manager.darwinModules.home-manager
-              {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.Violette = import ./hosts/saturn/home.nix;
-              }
-            ];
-        };
-      };
-
       homeConfigurations = {
         "saturn" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.mac; };
@@ -53,6 +72,7 @@
             ./hosts/sun/configuration.nix
             ./nixosModules
           ];
+          nixosConfigurations = import ./hosts { inherit self; };
         };
       };
     };
