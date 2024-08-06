@@ -17,21 +17,17 @@
         protonmail-desktop
         ani-cli
         neofetch
+        youtube-music
+        vesktop
       ]
       ++ lib.optionals config.generic.system.linux [
-        signal-desktop
-        whatsapp-for-linux
-        vesktop
-        xdg-desktop-portal
-        git
-        vscode
+
       ]
       ++ lib.optionals config.generic.system.mac [
         arc-browser
         iina
         raycast
         rectangle
-        youtube-music
         hidden-bar
         alt-tab-macos
         unar

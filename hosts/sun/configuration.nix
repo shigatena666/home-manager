@@ -6,5 +6,6 @@
     messengers.enable = true;
     networking.enable = true;
     pentesting.enable = false;
-    programming.enable = false;
+    programming.enable = true;
+    theming.enable = true;
 }

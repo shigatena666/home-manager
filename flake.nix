@@ -3,10 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin = {
-      url = "github:LnL7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,7 +34,7 @@
           modules = [
             ./hosts/${macMachine.pcName}/home.nix
             ./hosts/${macMachine.pcName}/configuration.nix
-            ./nixosModules
+            ./nixPackages
           ];
         }; 
         "${linuxMachine.pcName}" = home-manager.lib.homeManagerConfiguration {
@@ -46,7 +42,7 @@
           modules = [
             ./hosts/${linuxMachine.pcName}/home.nix
             ./hosts/${linuxMachine.pcName}/configuration.nix
-            ./nixosModules
+            ./nixPackages
           ];
         };
       };

@@ -9,5 +9,4 @@
     networking.enable = true;
     pentesting.enable = true;
     programming.enable = true;
-
 }

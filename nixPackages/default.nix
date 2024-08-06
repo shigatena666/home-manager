@@ -6,5 +6,6 @@
     ./networking.nix
     ./pentesting.nix
     ./programming.nix
+    ./theming.nix
   ];
 }
