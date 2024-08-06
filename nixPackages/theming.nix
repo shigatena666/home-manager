@@ -9,14 +9,14 @@
     home.packages = with pkgs; [
       gnome.gnome-shell-extensions
       gnomeExtensions.dash-to-dock
-      gnomeExtensions.tiling-shell
+      gnomeExtensions.pop-shell
     ];
 
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [
           "dash-to-dock@micxgx.gmail.com"
-          "tiling-shell@leleat-on-github"
+          "pop-shell@system76.com"
         ];
         favorite-apps = [
           "nautilus.desktop"
@@ -50,10 +50,25 @@
       };
 
 
-      # set tiling-shell
-      "org/gnome/shell/extensions/tiling-shell" = {
-        tiling-mode = "quarter";
-        enable-tiling-popup = true;
+      # set pop-shell extension
+      "org/gnome/shell/extensions/pop-shell" = {
+        active-hint = true;
+        active-hint-border-radius = 5;
+        gap-inner = 3;
+        gap-outer = 3;
+        hint-color-rgba = "rgba(251, 184, 108, 100)";
+        smart-gaps = true;
+        snap-to-grid = true;
+        tile-by-default = true;
+        toggle-tiling = ["<Super>y"];
+        activate-launcher = ["<Super>slash"];
+        tile-enter = ["<Super>Return"];
+        toggle-floating = ["<Super>g"];
+        toggle-stacking-global = ["<Super>s"];
+        focus-left = ["<Super>Left"];
+        focus-down = ["<Super>Down"];
+        focus-up = ["<Super>Up"];
+        focus-right = ["<Super>Right"];
       };
     };
   };
