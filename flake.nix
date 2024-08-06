@@ -51,25 +51,35 @@
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       systems = {
-        mac = "aarch64-darwin"; # for M1 mac
-        linux = "x86_64-linux"; # for linux x86
+        mac = "aarch64-darwin"; 
+        linux = "x86_64-linux";
+      };
+
+      macMachine = {
+        pcName = "saturn";
+        userName = "violette";
+      };
+
+      linuxMachine = {
+        pcName = "sun";
+        userName = "violette";
       };
     in
     {
       homeConfigurations = {
-        "saturn" = home-manager.lib.homeManagerConfiguration {
+        "${macMachine.userName}@${macMachine.pcName}" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.mac; };
           modules = [
-            ./hosts/saturn/home.nix
-            ./hosts/saturn/configuration.nix
+            ./hosts/${macMachine.pcName}/home.nix
+            ./hosts/${macMachine.pcName}/configuration.nix
             ./nixosModules
           ];
         };
-        "sun" = home-manager.lib.homeManagerConfiguration {
+        "${linuxMachine.userName}@${linuxMachine.pcName}" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = systems.linux; };
           modules = [
-            ./hosts/sun/home.nix
-            ./hosts/sun/configuration.nix
+            ./hosts/${linuxMachine.pcName}/home.nix
+            ./hosts/${linuxMachine.pcName}/configuration.nix
             ./nixosModules
           ];
         };
