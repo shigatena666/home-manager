@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }:
+
+{
     nixpkgs.config.allowUnfree = true;
     gaming.enable = true;
     generic.enable = true;
