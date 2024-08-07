@@ -21,7 +21,7 @@
         vesktop
       ]
       ++ lib.optionals config.generic.system.linux [
-
+        waydroid
       ]
       ++ lib.optionals config.generic.system.mac [
         arc-browser

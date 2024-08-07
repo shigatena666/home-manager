@@ -17,7 +17,7 @@
     ]
     ++ lib.optionals config.generic.system.linux [
       signal-desktop
-      whatsapp-for-linux
+
     ]
     ++ lib.optionals config.generic.system.mac [
 
