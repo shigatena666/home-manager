@@ -22,6 +22,7 @@
       ]
       ++ lib.optionals config.generic.system.linux [
         waydroid
+        dconf2nix
       ]
       ++ lib.optionals config.generic.system.mac [
         arc-browser

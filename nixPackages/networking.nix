@@ -7,7 +7,6 @@
 
   config = lib.mkIf config.networking.enable {
     home.packages = with pkgs; [
-      nextdns
       tailscale
     ];
   };
