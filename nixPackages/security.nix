@@ -1,14 +1,13 @@
 { pkgs, lib, config, ... }:
 
 {
-  options.programming = {
-    enable = lib.mkEnableOption "enables programming module";
+  options.security = {
+    enable = lib.mkEnableOption "enables security module";
   };
 
   config = lib.mkIf config.programming.enable {
     home.packages = with pkgs; [
-      vscode
-      docker
+      sops
     ];
   };
 }

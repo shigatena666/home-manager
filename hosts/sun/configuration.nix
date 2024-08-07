@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    nixpkgs.config.allowUnfree = true;
     gaming.enable = true;
     generic.enable = true;
     generic.system.linux = true;
@@ -9,5 +8,8 @@
     networking.enable = true;
     pentesting.enable = false;
     programming.enable = true;
+    security.enable = true;
     theming.enable = true;
+
+    nixpkgs.config.firefox.enableGnomeExtensions = true;
 }
