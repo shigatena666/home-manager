@@ -11,3 +11,11 @@ It is heavily inspired by the advices of Vimjoyer on this video : https://github
 # Compiling Nix
 
 - sudo nixos-rebuild switch
+
+# SOPS
+
+- sops --encrypt --in-place .secrets/secrets.yaml
+
+# dconf2nix
+
+dconf dump / | dconf2nix > dconf.nix

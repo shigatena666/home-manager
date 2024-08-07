@@ -12,8 +12,21 @@
       gnomeExtensions.gsnap
       gnomeExtensions.gsconnect
       gnomeExtensions.alphabetical-app-grid
-      gnomeExtensions.aylurs-widgets
       ags
+      bun
+      dart-sass
+      fd
+      brightnessctl
+      swww
+      matugen
+      fzf
+      hyprpicker
+      slurp
+      wf-recorder
+      wayshot
+      swappy
+      asusctl
+      supergfxctl
     ];
 
     dconf.settings = {
@@ -25,7 +38,6 @@
           "AlphabeticalAppGrid@stuarthayhurst"
           "system-monitor@gnome-shell-extensions.gcampax.github.com"
           "user-theme@gnome-shell-extensions.gcampax.github.com"
-          "aylurs-widgets@aylur"
         ];
         favorite-apps = [
           "nautilus.desktop"
@@ -42,7 +54,7 @@
       # set dash to dock.
       "org/gnome/shell/extensions/dash-to-dock" = {
         apply-custom-theme=false;
-        background-opacity=0.55000000000000004;
+        background-opacity=0.55;
         custom-theme-shrink=false;
         dance-urgent-applications=true;
         dash-max-icon-size=48;
@@ -83,18 +95,6 @@
         ];
       };
     };
-
-      "org/gnome/shell/extensions/aylurs-widgets" = {
-        "battery-bar-enabled" = true;
-        "dashboard-enabled" = true;
-        "date-menu-mod-enabled" = true;
-        "media-player-enabled" = true;
-        "power-menu-enabled" = true;
-        "workspace-indicator-enabled" = true;
-        "notification-indicator-enabled" = true;
-        "modified-quick-settings-enabled" = true;
-        "background-clock-enabled" = true;
-      };
 
     # auto restore session on close
     # "org/gnome/shell/gnome-session" = {

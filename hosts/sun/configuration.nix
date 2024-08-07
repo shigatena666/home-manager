@@ -11,5 +11,6 @@
     security.enable = true;
     theming.enable = true;
 
+    nixpkgs.config.allowUnfree = true;
     nixpkgs.config.firefox.enableGnomeExtensions = true;
 }

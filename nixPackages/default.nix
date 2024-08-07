@@ -8,5 +8,6 @@
     ./programming.nix
     ./security.nix
     ./theming.nix
+    ./dconf.nix
   ];
 }

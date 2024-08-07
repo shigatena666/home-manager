@@ -33,5 +33,18 @@
         alt-tab-macos
         unar
       ];
+
+      programs.firefox = {
+        enable = true;
+        profiles.default = {
+          id = 0;
+          name = "Default";
+          settings = {
+            "browser.startup.page" = 3;
+            "browser.sessionstore.resume_from_crash" = true;
+            "browser.sessionstore.max_resumed_crashes" = -1;
+          };
+        };
+      };
   };
 }

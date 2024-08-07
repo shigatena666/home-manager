@@ -8,6 +8,8 @@
   config = lib.mkIf config.programming.enable {
     home.packages = with pkgs; [
       sops
+      gnupg 
     ];
+    
   };
 }
