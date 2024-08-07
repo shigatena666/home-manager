@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, ... } @ inputs:
     let
       systems = {
         mac = "aarch64-darwin"; 
@@ -43,6 +44,7 @@
             ./hosts/${linuxMachine.pcName}/home.nix
             ./hosts/${linuxMachine.pcName}/configuration.nix
             ./nixPackages
+            stylix.homeManagerModules.stylix
           ];
         };
       };

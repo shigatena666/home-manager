@@ -21,6 +21,7 @@
         vesktop
       ]
       ++ lib.optionals config.generic.system.linux [
+        # TODO: Waydroid
         waydroid
         dconf2nix
       ]
