@@ -14,8 +14,9 @@ It is heavily inspired by the advices of Vimjoyer on this video : https://github
 
 # SOPS
 
-- sops --encrypt --in-place .secrets/secrets.yaml
+- sops --encrypt --in-place --pgp PGP .secrets/secrets.yaml
+- sops --decrypt secrets.yaml
 
 # dconf2nix
 
-dconf dump / | dconf2nix > dconf.nix
+- dconf dump / | dconf2nix > dconf.nix

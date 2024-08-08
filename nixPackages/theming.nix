@@ -25,10 +25,19 @@
       wf-recorder
       wayshot
       swappy
-      asusctl
       supergfxctl
+      tmux
     ];
     stylix.image = /run/current-system/sw/share/backgrounds/gnome/blobs-l.svg;
     stylix.polarity = "dark";
+
+    nixpkgs.overlays = [
+    (final: prev:
+    {
+      ags = prev.ags.overrideAttrs (old: {
+        buildInputs = old.buildInputs ++ [ pkgs.libdbusmenu-gtk3 ];
+      });
+    })
+  ];
   };
 }

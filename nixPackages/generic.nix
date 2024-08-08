@@ -24,6 +24,7 @@
         # TODO: Waydroid
         waydroid
         dconf2nix
+        pavucontrol
       ]
       ++ lib.optionals config.generic.system.mac [
         arc-browser
