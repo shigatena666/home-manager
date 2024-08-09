@@ -21,10 +21,9 @@
         vesktop
       ]
       ++ lib.optionals config.generic.system.linux [
-        # TODO: Waydroid
-        waydroid
         dconf2nix
         pavucontrol
+        ranger
       ]
       ++ lib.optionals config.generic.system.mac [
         arc-browser
