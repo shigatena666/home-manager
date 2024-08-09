@@ -5,6 +5,17 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "com/usebottles/bottles" = {
+      startup-view = "page_list";
+      window-height = 634;
+      window-width = 1670;
+    };
+
+    "org/gnome/Console" = {
+      last-window-maximised = false;
+      last-window-size = mkTuple [ 1670 1282 ];
+    };
+
     "org/gnome/Extensions" = {
       window-height = 1232;
       window-width = 1670;
@@ -12,7 +23,7 @@ with lib.hm.gvariant;
 
     "org/gnome/control-center" = {
       last-panel = "background";
-      window-state = mkTuple [ 1670 1237 false ];
+      window-state = mkTuple [ 1670 634 false ];
     };
 
     "org/gnome/desktop/app-folders" = {
@@ -57,7 +68,23 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-gnome-console" "org-gnome-fileroller" ];
+      application-children = [ "org-gnome-console" "org-gnome-fileroller" "code-url-handler" "com-usebottles-bottles" ];
+    };
+
+    "org/gnome/desktop/notifications/application/code-url-handler" = {
+      application-id = "code-url-handler.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/com-usebottles-bottles" = {
+      application-id = "com.usebottles.bottles.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/dev-warp-warp" = {
+      application-id = "dev.warp.Warp.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/firefox" = {
+      application-id = "firefox.desktop";
     };
 
     "org/gnome/desktop/notifications/application/org-gnome-console" = {
@@ -135,6 +162,7 @@ with lib.hm.gvariant;
       disabled-extensions = [ "widgets@aylur" "light-style@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "dash-to-dock@micxgx.gmail.com" "gSnap@micahosborne" "gsconnect@andyholmes.github.io" "AlphabeticalAppGrid@stuarthayhurst" "system-monitor@gnome-shell-extensions.gcampax.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "dev.warp.Warp.desktop" "firefox.desktop" "vesktop.desktop" "signal-desktop.desktop" "slack.desktop" "youtube-music.desktop" "code.desktop" ];
+      last-selected-power-profile = "performance";
       welcome-dialog-last-shown-version = "46.2";
     };
 
@@ -205,7 +233,7 @@ with lib.hm.gvariant;
       sort-order = "ascending";
       type-format = "category";
       view-type = "list";
-      window-size = mkTuple [ 921 366 ];
+      window-size = mkTuple [ 921 372 ];
     };
 
     "org/gtk/settings/file-chooser" = {

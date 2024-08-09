@@ -8,10 +8,12 @@
   config = lib.mkIf config.theming.enable {
     home.packages = with pkgs; [
       gnome.gnome-shell-extensions
+      gnome.gnome-control-center
       gnomeExtensions.dash-to-dock
       gnomeExtensions.gsnap
       gnomeExtensions.gsconnect
       gnomeExtensions.alphabetical-app-grid
+      xdg-desktop-portal-gnome
       ags
       bun
       dart-sass
@@ -23,14 +25,11 @@
       hyprpicker
       slurp
       wf-recorder
+      wl-clipboard
       wayshot
       swappy
       supergfxctl
-      tmux
     ];
-    stylix.image = /run/current-system/sw/share/backgrounds/gnome/blobs-l.svg;
-    stylix.polarity = "dark";
-
     nixpkgs.overlays = [
     (final: prev:
     {
@@ -39,5 +38,7 @@
       });
     })
   ];
+    stylix.image = /run/current-system/sw/share/backgrounds/gnome/blobs-l.svg;
+    stylix.polarity = "dark";
   };
 }
